@@ -1,0 +1,49 @@
+<div class="max-w-lg flex items-center justify-center flex-col gap-y-6">
+  <h1 class="text-4xl md:text-8xl font-bold text-center">
+    {{ section.settings.title }}
+  </h1>
+  <div class="flex flex-col gap-y-4 items-center text-center text-lg md:text-xl">
+    <p>
+      {{ section.settings.subtext }}
+    </p>
+    {% if section.settings.link_url == blank %}
+      {% assign shop_url = shop.secure_url %}
+    {% else %}
+      {% assign shop_url = shop_url %}
+    {% endif %}
+    <a href="{{ shop_url }}" class="px-4 py-2 max-w-max bg-black text-white border hover:bg-white hover:text-black border-black">Back to {{ section.settings.link_label }}</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Template 404",
+  "tag": "section",
+  "class": "flex items-center justify-center flex-col min-h-screen",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "404 Heading",
+      "default": "404"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "404 Subtext",
+      "default": "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+    },
+    {
+      "type": "text",
+      "id": "link_label",
+      "label": "Link Label",
+      "default": "Home"
+    },
+    {
+      "type": "url",
+      "id": "link_url",
+      "label": "Link URL"
+    }
+  ]
+}
+{% endschema %}
