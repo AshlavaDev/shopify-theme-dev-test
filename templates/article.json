@@ -3,38 +3,38 @@
     "template": {
       "type": "template-article",
       "blocks": {
-        "article_title_MnH6YU": {
+        "article_title": {
           "type": "article_title",
           "settings": {
           }
         },
-        "article_author_TKTKDN": {
+        "article_author": {
           "type": "article_author",
           "settings": {
           }
         },
-        "article_published_date_arjq3P": {
+        "article_published_date": {
           "type": "article_published_date",
           "settings": {
           }
         },
-        "article_thumbnail_Yk4kdD": {
+        "article_thumbnail": {
           "type": "article_thumbnail",
           "settings": {
           }
         },
-        "article_content_pqUe7E": {
+        "article_content": {
           "type": "article_content",
           "settings": {
           }
         }
       },
       "block_order": [
-        "article_title_MnH6YU",
-        "article_author_TKTKDN",
-        "article_published_date_arjq3P",
-        "article_thumbnail_Yk4kdD",
-        "article_content_pqUe7E"
+        "article_title",
+        "article_author",
+        "article_published_date",
+        "article_thumbnail",
+        "article_content"
       ],
       "settings": {
         "show_author": true,
