@@ -1,4 +1,5 @@
 {
+  "name": "template_cart",
   "sections": {
     "template": {
       "type": "template-cart",
