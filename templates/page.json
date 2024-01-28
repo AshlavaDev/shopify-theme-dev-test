@@ -1,11 +1,19 @@
 {
-  "name": "template_page",
   "sections": {
     "template": {
-      "type": "template-page"
+      "type": "template-page",
+      "settings": {
+      }
+    },
+    "contact_form_aHk6DR": {
+      "type": "contact-form",
+      "settings": {
+        "title": "Contact Us"
+      }
     }
   },
   "order": [
-    "template"
+    "template",
+    "contact_form_aHk6DR"
   ]
 }
