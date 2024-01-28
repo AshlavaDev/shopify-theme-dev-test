@@ -1,0 +1,22 @@
+<div class="flex flex-col items-center gap-2 w-full overflow-hidden rounded-lg">
+  {% if collection.featured_image %}
+    {% assign featured_image = collection.featured_image %}
+  {% else %}
+    {% assign featured_image = collection.products.first.image %}
+  {% endif %}
+  <a href="{{ collection.url }}" class="h-80 overflow-hidden">
+    {% if featured_image != blank %}
+      <img 
+        src="{{ featured_image | img_url: 'medium' }}" 
+        alt="{{ featured_image.alt }}" 
+        class="h-full w-full object-cover border rounded-lg transition duration-1000 ease-in-out hover:scale-105 transform"
+      >
+    {% else %}
+      {{ 'collection-1' | placeholder_svg_tag: 'h-full w-full object-cover border rounded-lg' }}
+    {% endif %}
+  </a>
+
+
+  <a href="{{ collection.url }}" class="text-lg font-bold">{{ collection.title }}</a>
+
+</div>
