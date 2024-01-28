@@ -1,0 +1,51 @@
+<div class="py-8 flex flex-col items-center justify-center">
+
+  {% paginate blog.articles by section.settings.number_of_blog_posts %}
+    <h1 class="text-2xl md:text-4xl font-bold">{{ blog.title }}</h1>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      {% for article in blog.articles %}
+        <div class="w-full py-6 px-3">
+          <a href="{{ article.url }}" class="bg-white hover:text-red-800 shadow-xl rounded-lg overflow-hidden">
+            {% if article.image %}
+              <img 
+                src="{{ article.image | img_url: 'medium' }}" 
+                alt="{{ article.image.alt }}"
+                class="w-full h-80 object-cover"
+              >
+            {% else %}
+              {{ 'image' | placeholder_svg_tag: 'w-full h-80 object-cover bg-gray-100' }}
+            {% endif %}
+            <h2 class="font-medium text-lg md:text-2xl my-3">{{ article.title }}</h2>
+            {% if article.excerpt.size > 0 %}
+              <p>{{ article.excerpt | strip_html | truncatewords: 20 }}</p>
+            {% else %}
+              <p>{{ article.content | strip_html | truncatewords: 20 }}</p>
+            {% endif %}
+          </a>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto">
+      {% render 'pagination', pagination: paginate %}
+    </div>
+  {% endpaginate %}
+</div>
+
+{% schema %}
+  {
+    "name": "Blogs",
+    "settings": [
+      {
+        "type": "range",
+        "id": "number_of_blog_posts",
+        "step": 1,
+        "min": 1,
+        "max": 9,
+        "label": "Number of Blog Posts Per Page",
+        "default": 3
+      }
+    ]
+  }
+{% endschema %}
