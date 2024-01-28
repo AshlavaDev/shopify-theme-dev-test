@@ -814,6 +814,10 @@ video {
   max-width: max-content;
 }
 
+.max-w-3xl {
+  max-width: 48rem;
+}
+
 .flex-1 {
   flex: 1 1 0%;
 }
