@@ -82,21 +82,21 @@
           <div class="px-3 md:w-1/2">
             <label for="comment_author" class="text-sm md:text-base text-gray-700 uppercase">Name</label>
             <input type="text" name="comment[author]" id="comment_author" value="{{ form.author }}"
-              class="w-full text-gray-600 border border-gray-600 py-2 px-3 mb-2 focus:outline-none"
+              class="form-input"
               placeholder="Your name" required
             >
           </div>
           <div class="px-3 md:w-1/2">
-            <label for="comment_email" class="text-sm md:text-base text-gray-700 uppercase">Email</label>
+            <label for="comment_email" class="form-label">Email</label>
             <input type="email" name="comment[email]" id="comment_email" value="{{ form.email }}"
-              class="w-full text-gray-600 border border-gray-600 py-2 px-3 mb-2 focus:outline-none"
+              class="form-input"
               placeholder="Your email" required
             >
           </div>
         </div>
         <div class="px-1 md:flex md:justify-center mb-3">
           <div class="md:w-full px-3">
-            <label for="comment_content" class="text-sm md:text-base text-gray-700 uppercase">Comment</label>
+            <label for="comment_content" class="form-label">Comment</label>
             <textarea name="comment[body]" id="comment_content" required 
               class="w-full text-gray-600 border border-gray-600 py-2 px-3 mb-2 focus:outline-none resize-none h-20">
               {{ form.body }}
