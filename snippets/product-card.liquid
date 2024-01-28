@@ -1,0 +1,21 @@
+<div class="flex flex-col items-center gap-2 w-full overflow-hidden rounded-lg">
+  {% if product.featured_image %}
+    <a href="{{ product.url }}" class="h-80 overflow-hidden">
+      <img 
+        src="{{ product.featured_image | img_url: 'medium' }}" 
+        alt="{{ product.featured_image.alt }}" 
+        class="h-full w-full object-cover border rounded-lg transition duration-1000 ease-in-out hover:scale-105 transform">
+    </a>
+  {% else %}
+    <a href="{{ product.url }}" class="h-80 overflow-hidden">
+      {{ 'product-1' | placeholder_svg_tag: 'h-full w-full object-cover border rounded-lg' }}
+    </a>
+  {% endif %}
+  <div class="flex flex-col p-4">
+    {% if section.settings.show_vendor %}
+      <span>{{ product.vendor }}</span>
+    {% endif %}
+    <a href="{{ product.url }}" class="text-lg font-bold">{{ product.title }}</a>
+    <p>{{ product.price | money }}</p>
+  </div>
+</div>
