@@ -1,0 +1,43 @@
+{
+  "name": "template_product",
+  "sections": {
+    "template": {
+      "type": "template-product",
+      "blocks": {
+        "vendor": {
+          "type": "vendor"
+        },
+        "title": {
+          "type": "title"
+        },
+        "price": {
+          "type": "price"
+        },
+        "variants": {
+          "type": "variants"
+        },
+        "quantity": {
+          "type": "quantity"
+        },
+        "description": {
+          "type": "description"
+        },
+        "checkout_buttons": {
+          "type": "checkout-buttons"
+        }
+      },
+      "blocks_order": [
+        "vendor",
+        "title",
+        "price",
+        "variants",
+        "quantity",
+        "description",
+        "checkout_buttons"
+      ]
+    }
+  },
+  "order": [
+    "template"
+  ]
+}
