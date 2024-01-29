@@ -1,14 +1,19 @@
 {
   "sections": {
     "template": {
-      "type": "template-page"
+      "type": "template-page",
+      "settings": {
+      }
     },
-    "contact-form": {
-      "type": "contact-form"
+    "contact_form_McPEXV": {
+      "type": "contact-form",
+      "settings": {
+        "title": ""
+      }
     }
   },
   "order": [
     "template",
-    "contact-form"
+    "contact_form_McPEXV"
   ]
 }

@@ -1,20 +1,31 @@
 {
-  "name": "template_cart",
   "sections": {
     "template": {
       "type": "template-cart",
-      "block": {
-        "subtitle": {
-          "type": "subtotal"
+      "blocks": {
+        "subtotal_9xQM3G": {
+          "type": "subtotal",
+          "settings": {
+          }
         },
-        "update-button": {
-          "type": "update_button"
+        "update_button_A9MfGa": {
+          "type": "update_button",
+          "settings": {
+          }
         },
-        "checkout-button": {
-          "type": "checkout_button"
+        "checkout_button_cPqtPx": {
+          "type": "checkout_button",
+          "settings": {
+          }
         }
       },
-      "block_order": ["subtitle", "update-button", "checkout-button"]      
+      "block_order": [
+        "subtotal_9xQM3G",
+        "update_button_A9MfGa",
+        "checkout_button_cPqtPx"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
