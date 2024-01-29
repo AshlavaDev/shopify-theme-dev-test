@@ -1,40 +1,55 @@
 {
-  "name": "template_product",
   "sections": {
     "template": {
       "type": "template-product",
       "blocks": {
-        "vendor": {
-          "type": "vendor"
+        "vendor_yqph34": {
+          "type": "vendor",
+          "settings": {
+          }
         },
-        "title": {
-          "type": "title"
+        "title_aeaVjH": {
+          "type": "title",
+          "settings": {
+          }
         },
-        "price": {
-          "type": "price"
+        "price_rLcCrm": {
+          "type": "price",
+          "settings": {
+          }
         },
-        "variants": {
-          "type": "variants"
+        "variants_wLqnyK": {
+          "type": "variants",
+          "settings": {
+          }
         },
-        "quantity": {
-          "type": "quantity"
+        "quantity_mfnBKw": {
+          "type": "quantity",
+          "settings": {
+          }
         },
-        "description": {
-          "type": "description"
+        "description_gPrTdF": {
+          "type": "description",
+          "settings": {
+          }
         },
-        "checkout_buttons": {
-          "type": "checkout-buttons"
+        "checkout_buttons_EHbxNr": {
+          "type": "checkout-buttons",
+          "settings": {
+          }
         }
       },
-      "blocks_order": [
-        "vendor",
-        "title",
-        "price",
-        "variants",
-        "quantity",
-        "description",
-        "checkout_buttons"
-      ]
+      "block_order": [
+        "vendor_yqph34",
+        "title_aeaVjH",
+        "price_rLcCrm",
+        "variants_wLqnyK",
+        "quantity_mfnBKw",
+        "description_gPrTdF",
+        "checkout_buttons_EHbxNr"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
